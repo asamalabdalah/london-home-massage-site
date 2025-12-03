@@ -1,0 +1,31 @@
+<div class="reviews-header">
+  <p class="customer__label">CUSTOMER REVIEWS</p>
+  <h2 class="how-title">See why they love us</h2>
+</div>
+
+<section class="testimonials">
+  <div class="testimonials__container">
+
+    <!-- التقييم العام -->
+    <div class="testimonials__summary">
+      <h3 class="summary__title">Excellent</h3>
+      <div class="summary__stars">★★★★★</div>
+      <p class="summary__label">Trustpilot</p>
+    </div>
+
+    <!-- سلايدر التقييمات -->
+    <div class="testimonials__slider-wrapper">
+      <button class="slider-arrow left" (click)="scrollLeft()">‹</button>
+
+      <div class="testimonials__list">
+        <div class="testimonial" *ngFor="let review of visibleReviews">
+          <div class="testimonial__stars">{{ review.stars }}</div>
+          <p class="testimonial__text">{{ review.text }}</p>
+        </div>
+      </div>
+
+      <button class="slider-arrow right" (click)="scrollRight()">›</button>
+    </div>
+
+  </div>
+</section>

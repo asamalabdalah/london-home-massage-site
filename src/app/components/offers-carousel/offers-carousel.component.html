@@ -1,0 +1,17 @@
+<!-- <div class="offer-banner">
+  <div class="offer-text">
+    <h2>Discover Our Exclusive Deals</h2>
+    <p>Relax, refresh, and renew with our premium services</p>
+    <button class="see-more-button" (click)="goToOffers()">See more</button>
+  </div>
+  <img src="assets/pictures/massage.webp" alt="Offer Banner" class="offer-image" />
+</div> -->
+
+<div class="offer-banner">
+  <div class="offer-text">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+    <button class="see-more-button" (click)="goToOffers()">{{ buttonText }}</button>
+  </div>
+  <img [src]="imageUrl" alt="Offer Banner" class="offer-image" />
+</div>

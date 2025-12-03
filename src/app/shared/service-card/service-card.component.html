@@ -1,0 +1,20 @@
+<div class="service-card-container">
+  <div class="image-section">
+    <img [src]="imageUrl" [alt]="name" />
+  </div>
+
+  <div class="info-section">
+    <!-- ✅ قسم الوصف -->
+    <div class="description-block">
+      <h3 class="service-name">{{ name }}</h3>
+      <p class="service-description">{{ description }}</p>
+      <p class="service-pressure">{{ pressure }}</p>
+    </div>
+
+    <!-- ✅ صف الزر والرابط -->
+    <div class="action-row">
+      <button class="book-now-btn">Book from £{{ price }}</button>
+      <a [routerLink]="link" class="learn-more">Learn more</a>
+    </div>
+  </div>
+</div>

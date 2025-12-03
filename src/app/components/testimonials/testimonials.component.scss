@@ -1,0 +1,112 @@
+.testimonials {
+  padding: 20px;
+  background-color: #fff;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.testimonials__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonials__summary {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .summary__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .summary__stars {
+    font-size: 20px;
+    background: linear-gradient(90deg, #8ac6d1, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+  }
+
+  .summary__label {
+    font-size: 14px;
+    color: #888;
+  }
+}
+
+.customer__label {
+  font-size: 14px;
+  color: #888;
+}
+
+.testimonials__slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.testimonials__list {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.testimonial {
+  flex: 0 0 calc(33.333% - 10px); // 3 تقييمات في الصف
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  .testimonial__stars {
+    font-size: 18px;
+    background: linear-gradient(90deg, #8ac6d1, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__text {
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.slider-arrow {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 5px;
+  z-index: 1;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #0078d4;
+  }
+}
+.how-title {
+  font-size: 2rem;
+  color: #00b4d8;
+ // margin-bottom: 3rem;
+  font-family: 'Lobster', cursive;
+}
+@media (max-width: 900px) {
+  .testimonial {
+    flex: 0 0 calc(50% - 10px); // 2 تقييمات في الصف
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial {
+    flex: 0 0 100%; // تقييم واحد في الصف
+  }
+}

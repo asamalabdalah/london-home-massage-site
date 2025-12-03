@@ -1,0 +1,133 @@
+.app-invite {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  gap: 2rem;
+
+  &__content {
+    flex: 1;
+    min-width: 280px;
+
+    h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+
+      li {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.2rem;
+
+        &::before {
+          content: "✔";
+          position: absolute;
+          left: 0;
+          color: #34a853;
+        }
+      }
+    }
+
+    .download-links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .store-btn {
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+
+        &.apple {
+          background-color: #000;
+        }
+
+        &.google {
+          background-color: #34a853;
+        }
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    .reviews {
+      font-size: 0.9rem;
+      color: #888;
+    }
+  
+  }
+
+  &__visuals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+
+    .app-image {
+      width: 180px;
+      margin-bottom: 1rem;
+    }
+
+    .qr-box {
+      text-align: center;
+
+      .qr-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    }
+  }
+}
+.stars
+{
+    color: #00b4d8;
+}
+@media (max-width: 700px) {
+  .app-invite__visuals {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+
+    .app-image {
+      width: 140px;
+      margin-bottom: 0; // نلغي المسافة السفلية لأنها لم تعد ضرورية
+    }
+
+    .qr-box {
+      text-align: left;
+
+      .qr-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+

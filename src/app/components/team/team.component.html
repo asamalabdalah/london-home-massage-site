@@ -1,0 +1,22 @@
+<section class="team-section">
+  <h4>Our Team</h4>
+  <h2>Meet the Relax & Glow Pros</h2>
+
+  <div class="slider-container">
+    <button class="slider-btn prev" (click)="prev()">‹</button>
+
+    <div class="slider-track">
+      <img
+        *ngFor="let img of visibleImages; let i = index"
+        [src]="img"
+        alt="Team Member"
+        class="team-img"
+        [class.up]="i % 2 === 0"
+        [class.down]="i % 2 !== 0"
+      />
+    </div>
+
+    <button class="slider-btn next" (click)="next()">›</button>
+  </div>
+</section>
+

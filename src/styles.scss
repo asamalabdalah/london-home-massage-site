@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+$mint: #D5E8D4;
+$beige: #F5F5DC;
+$pink: #FADADD;
+$gray: #EAEAEA;
+$gold: #D4AF37;
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: $mint;
+  color: #333;
+}
+body {
+    background-image: url('/assets/pictures/background2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }

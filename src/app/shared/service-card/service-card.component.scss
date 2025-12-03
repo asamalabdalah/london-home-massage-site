@@ -1,0 +1,102 @@
+.service-card-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.image-section {
+  flex: 0 0 160px;
+}
+
+.image-section img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ✅ قسم الوصف */
+.description-block {
+  margin-bottom: 1rem;
+}
+
+.service-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.2rem;
+}
+
+.service-pressure {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* ✅ صف الزر والرابط */
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-now-btn {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.learn-more {
+  color: #00b4d8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .service-card-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info-section {
+    width: 100%;
+  }
+
+  .action-row {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .book-now-btn {
+    font-size: 1rem;
+  }
+
+  .learn-more {
+    font-size: 1rem;
+  }
+}

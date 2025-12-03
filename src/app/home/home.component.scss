@@ -1,0 +1,165 @@
+@use '../../styles/variables' as *;
+@use "sass:color";
+
+.hero {
+  background-color: $beige;
+  // باقي التنسيق...
+}
+
+.hero {
+    background-color: $beige;
+    text-align: center;
+    padding: 100px 20px;
+  
+    h1 {
+      font-size: 3rem;
+      color: $gold;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #555;
+    }
+  
+    button {
+      background-color: $pink;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: color.adjust($pink, $lightness: 10%);
+      }
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/pictures/background2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 800px; 
+    margin-bottom: 300px;
+}
+.offers-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+}
+.offer {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 60px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.offer img {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+}
+.offer-text {
+    flex: 1;
+    padding: 15px;
+    width: 50%;
+}
+.offer-text h3 {
+    color: #8ac6d1;
+}
+.see-more-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8ac6d1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form-section {
+margin: 50px auto;
+max-width: 800px;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 8px;
+text-align: center;
+}
+.form-section h2 {
+color: #8ac6d1;
+}
+.form-row {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+.form-row input, .form-row select, .form-row textarea {
+flex: 1;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+font-size: 16px;
+margin-right: 10px;
+}
+.form-row input::placeholder, .form-row select::placeholder, .form-row textarea::placeholder {
+color: #888;
+}
+.form-row textarea {
+width: calc(100% - 20px);
+height: 100px;
+margin-right: 0;
+}
+.form-section button {
+padding: 10px 20px;
+background-color: #8ac6d1;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+.form-section button:hover {
+background-color: #71a6a1;
+}
+
+
+footer {
+    background-color: rgba(138, 198, 209, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+.offer:nth-child(odd) {
+    flex-direction: row;
+}
+.offer:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.section-separator {
+  width: 100%;
+  height: 80px; // يمكنك تغيير الارتفاع حسب رغبتك
+  background: transparent;
+  margin: 0;
+  border: none;
+  /* يمكنك إضافة تأثيرات إضافية مثل تدرج أو ظل إذا رغبت */
+}

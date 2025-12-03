@@ -1,0 +1,78 @@
+
+<div class="container">
+    <div class="offers-wrapper">
+       <!-- <app-offers-carousel></app-offers-carousel> -->
+        <app-offers-carousel
+            [title]="'Discover Our Exclusive Deals'"
+            [description]="'Relax, refresh, and renew with our premium services'"
+            [imageUrl]="'assets/pictures/massage.webp'"
+            [buttonText]="'See more'"
+            [link]="'/offers'"
+        ></app-offers-carousel>
+        <div class="section-separator"></div>
+
+        <app-hero-banner></app-hero-banner> 
+        <div class="section-separator"></div>
+
+        <!-- <app-work-showcase></app-work-showcase> -->
+         <app-work-showcase videoSrc="assets/Videos/massage.mp4"></app-work-showcase>
+        <div class="section-separator"></div>
+
+        <!-- <app-how-it-works></app-how-it-works> -->
+         <app-how-it-works
+  [title]="'Relax, your Home'"
+  [steps]="[
+    { heading: 'Select Your Service', description: 'Browse our treatments.<br>Choose what suits you best.' },
+    { heading: 'Book Your Time', description: 'Pick a convenient slot.<br>We’ll be there on time.' },
+    { heading: 'Enjoy at Home', description: 'Our expert arrives.<br>You relax and enjoy.' }
+  ]"
+></app-how-it-works>
+        <div class="section-separator"></div>
+
+        <app-testimonials></app-testimonials>
+        <div class="section-separator"></div>
+
+        <app-download-app></app-download-app>
+        <div class="section-separator"></div>
+
+        <app-safety-info></app-safety-info>
+        <div class="section-separator"></div>
+
+        <app-featured-services></app-featured-services>
+        <div class="section-separator"></div>
+
+        <app-team></app-team>
+        <div class="section-separator"></div>
+
+
+    </div>
+</div>
+<div class="form-section">
+<h2>Contact Us</h2>
+<form>
+    <div class="form-row">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-row">
+    <input type="tel" id="telephone" name="telephone" placeholder="Telephone" required>
+        <select id="massage-type" name="massage-type" required>
+            <option value="" disabled selected>Type of Massage</option>
+            <option value="klassische">Klassische Massage</option>
+            <option value="thai">Traditionalle Thai Massage</option>
+            <option value="aroma">Aromaölmassage</option>
+            <option value="hot-cold-stone">Hot / Cold Stone Massage</option>
+            <option value="fussreflexzonen">Fußreflexzonenmassage</option>
+            <option value="rucken">Rückenmassage</option>
+            <option value="ganzkorper">Ganzkörpermassage</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+</form>
+</div>
+
+
+

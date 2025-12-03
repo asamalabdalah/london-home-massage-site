@@ -1,0 +1,72 @@
+.safety-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+
+  .safety-image {
+    flex: 1;
+    min-width: 280px;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .safety-content {
+    flex: 1;
+    min-width: 280px;
+
+    h2 {
+      font-size: 1.8rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .safety-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+
+      li {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.2rem;
+
+        &::before {
+          content: "✔";
+          position: absolute;
+          left: 0;
+          color: #34a853;
+        }
+      }
+    }
+
+    .learn-more {
+      font-size: 0.9rem;
+      color: #0077cc;
+      text-decoration: underline;
+    }
+  }
+
+  // 📱 استجابة للشاشات الصغيرة
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .safety-image {
+      order: 1;
+    }
+
+    .safety-content {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="offers-wrapper">
+        <app-offers-carousel
+            [title]="'Beauty Specials Just for You'"
+            [description]="'Unwind with our tailored beauty packages'"
+            [imageUrl]="'assets/pictures/beauty/beautystartsite.jpg'"
+            [buttonText]="'Discover our exclusive beauty deals'"
+            [link]="'/pages/beauty'"
+        ></app-offers-carousel>
+        <div class="section-separator"></div>
+        <h2 class="section-title">{{ pageTitle }}</h2>
+
+        <div class="service-list">
+        <app-service-card
+            *ngFor="let treatment of visibleTreatments"
+            [name]="treatment.name"
+            [description]="treatment.description"
+            [pressure]="treatment.pressure"
+            [imageUrl]="treatment.imageUrl"
+            [price]="treatment.price"
+            [link]="treatment.link"
+        ></app-service-card>
+        </div>
+
+        <!-- زر عرض المزيد / عرض أقل -->
+        <div class="toggle-button-container" *ngIf="treatments.length > 6">
+            <a (click)="toggleView()" class="toggle-link">
+                {{ showAll ? 'View fewer treatments' : 'View more treatments' }}
+            </a>
+        </div>
+        <div class="section-separator"></div>
+        <app-work-showcase videoSrc="assets/Videos/beautystartsitevedio.mp4"></app-work-showcase>
+        <div class="section-separator"></div>
+
+        <app-how-it-works
+        [title]="'Beauty at Your Doorstep'"
+        [steps]="[
+            { heading: 'Choose Beauty Type', description: 'Gel manicure, Gel pedicure, or Hydrating facial.<br>Pick your favorite.' },
+            { heading: 'Set Your Schedule', description: 'Select a time that suits you.<br>We’ll be there.' },
+            { heading: 'Relax & Rejuvenate', description: 'Let our expert do the magic.<br>Enjoy your session.' }
+        ]"
+        ></app-how-it-works>
+        <div class="section-separator"></div>
+         <app-team></app-team>
+        <div class="section-separator"></div>
+    </div>
+</div> 
+

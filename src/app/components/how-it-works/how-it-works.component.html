@@ -1,0 +1,53 @@
+<!-- <section class="how-it-works">
+  <p class="howitworks__label">How it works</p>
+  <h2 class="how-title">Relax, your Home</h2>
+
+  <div class="steps-row">
+    <div class="step-box">
+      <div class="step-circle">1</div>
+      <h3 class="step-heading">Select Your Service</h3>
+      <p class="step-description">
+        Browse our treatments.<br>
+        Choose what suits you best.
+      </p>
+    </div>
+    <div class="step-box">
+      <div class="step-circle">2</div>
+      <h3 class="step-heading">Book Your Time</h3>
+      <p class="step-description">
+        Pick a convenient slot.<br>
+        We’ll be there on time.
+      </p>
+    </div>
+    <div class="step-box">
+      <div class="step-circle">3</div>
+      <h3 class="step-heading">Enjoy at Home</h3>
+      <p class="step-description">
+        Our expert arrives.<br>
+        You relax and enjoy.
+      </p>
+    </div>
+  </div>
+
+  <div class="start-button-container">
+    <button class="start-button">Are you ready to start</button>
+  </div>
+</section> -->
+
+<!-- how-it-works.component.html -->
+<section class="how-it-works">
+  <p class="howitworks__label">How it works</p>
+  <h2 class="how-title">{{ title }}</h2>
+
+  <div class="steps-row">
+    <div class="step-box" *ngFor="let step of steps; let i = index">
+      <div class="step-circle">{{ i + 1 }}</div>
+      <h3 class="step-heading">{{ step.heading }}</h3>
+      <p class="step-description" [innerHTML]="step.description"></p>
+    </div>
+  </div>
+
+  <div class="start-button-container">
+    <button class="start-button">Are you ready to start</button>
+  </div>
+</section>
